@@ -33,22 +33,47 @@ public class Main {
 
     public static String numberToWords(int num) {
 
-        String[] numNames = {
-                "Zero",
-                " One",
-                " Two",
-                " Three",
-                " Four",
-                " Five",
-                " Six",
-                " Seven",
-                " Eight",
-                " Nine",
-        };
         if (num < 0) {
             return "Invalid Value";
         }
+        StringBuilder returnStr = new StringBuilder();
+        char[] nums = String.valueOf(num).toCharArray();
+        for (char number : nums) {
+            switch (String.valueOf(number)) {
+                case "0":
+                    returnStr.append("Zero ");
+                    break;
+                case "1":
+                    returnStr.append("One ");
+                    break;
+                case "2":
+                    returnStr.append("Two ");
+                    break;
+                case "3":
+                    returnStr.append("Three ");
+                    break;
+                case "4":
+                    returnStr.append("Four ");
+                    break;
+                case "5":
+                    returnStr.append("Five ");
+                    break;
+                case "6":
+                    returnStr.append("Six ");
+                    break;
+                case "7":
+                    returnStr.append("Seven ");
+                    break;
+                case "8":
+                    returnStr.append("Eight ");
+                    break;
+                case "9":
+                    returnStr.append("Nine ");
+                    break;
 
-        return "Hello";
+            }
+
+        }
+        return (returnStr.toString().trim());
     }
 }
