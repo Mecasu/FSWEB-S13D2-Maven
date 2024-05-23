@@ -39,6 +39,8 @@ public class Main {
         StringBuilder returnStr = new StringBuilder();
         char[] nums = String.valueOf(num).toCharArray();
         for (char number : nums) {
+
+
             switch (String.valueOf(number)) {
                 case "0":
                     returnStr.append("Zero ");
